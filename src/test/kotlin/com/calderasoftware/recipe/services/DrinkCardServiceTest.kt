@@ -12,13 +12,13 @@ internal class DrinkCardServiceTest {
     private val ingredients = listOf(
         Ingredient.Builder(
             name = "rum",
-            unitPrice = .90,
+            unitCost = .90,
             unitCalories = 65.0,
             unitOfMeasure = "ounces"
         ).build() to 3.0,
         Ingredient.Builder(
             name = "coke",
-            unitPrice = .05,
+            unitCost = .05,
             unitCalories = 10.0,
             unitOfMeasure = "ounces"
         ).build() to 6.0,

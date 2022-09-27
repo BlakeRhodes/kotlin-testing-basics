@@ -12,13 +12,14 @@ internal class IngredientTest {
     @BeforeEach
     fun setUp() {
         builder = Ingredient.Builder(
-            unitPrice = 2.0
+            unitCost = 2.0
         )
     }
 
     // TODO: Example 1
     // 3 A's
     @Test
+    //   Method Should (When)
     fun `cost should return the product of the unitPrice and the number of units, single test`() {
         // Arrange
         val expected = 4.0
@@ -36,7 +37,7 @@ internal class IngredientTest {
     @ParameterizedTest
     @CsvSource(
         "2.0,2.0,4.0",
-        "1.5,4.0,6.0"
+        "1.5,4.0,6.0",
     )
     fun `calories should return the product of the unitPrice and the number of units`(
         unitCalories: Double,

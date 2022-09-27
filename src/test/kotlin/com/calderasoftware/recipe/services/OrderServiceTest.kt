@@ -21,7 +21,7 @@ internal class OrderServiceTest {
 
     private val ingredient = Ingredient.Builder(
         name = "ingredient",
-        unitPrice = 2.0,
+        unitCost = 2.0,
         unitCalories = 2.0,
         unitOfMeasure = "ounces",
     ).build()

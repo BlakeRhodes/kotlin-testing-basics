@@ -27,10 +27,10 @@ internal class RecipeTest {
         val recipe = builder.assign(
             "ingredients",
             listOf(
-                Ingredient.Builder(unitPrice = 1.0).build() to 1.0,
-                Ingredient.Builder(unitPrice = 2.0).build() to 2.0,
-                Ingredient.Builder(unitPrice = 3.0).build() to 3.0,
-                Ingredient.Builder(unitPrice = 4.0).build() to 4.0,
+                Ingredient.Builder(unitCost = 1.0).build() to 1.0,
+                Ingredient.Builder(unitCost = 2.0).build() to 2.0,
+                Ingredient.Builder(unitCost = 3.0).build() to 3.0,
+                Ingredient.Builder(unitCost = 4.0).build() to 4.0,
             )
         ).build()
 

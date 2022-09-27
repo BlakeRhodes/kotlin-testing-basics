@@ -2,7 +2,7 @@ package com.calderasoftware.recipe.models
 
 class Ingredient(
     val name: String,
-    val unitPrice: Double,
+    val unitCost: Double,
     val unitCalories: Double,
     val unitOfMeasure: String,
 ) {
@@ -11,7 +11,7 @@ class Ingredient(
 
     class Builder(
         name: String = "",
-        unitPrice: Double = 0.0,
+        unitCost: Double = 0.0,
         unitCalories: Double = 0.0,
         unitOfMeasure: String = "unit",
     ) {
@@ -20,7 +20,7 @@ class Ingredient(
         init {
             values = mutableMapOf(
                 "name" to name,
-                "unitPrice" to unitPrice,
+                "unitCost" to unitCost,
                 "unitCalories" to unitCalories,
                 "unitOfMeasure" to unitOfMeasure
             )
@@ -32,7 +32,7 @@ class Ingredient(
 
         fun build(): Ingredient = Ingredient(
             name = values["name"] as String,
-            unitPrice = values["unitPrice"] as Double,
+            unitCost = values["unitCost"] as Double,
             unitCalories = values["unitCalories"] as Double,
             unitOfMeasure = values["unitOfMeasure"] as String,
         )
