@@ -23,7 +23,7 @@ internal class OrderServiceTest {
         name = "ingredient",
         unitPrice = 2.0,
         unitCalories = 2.0,
-        unit = "ounces",
+        unitOfMeasure = "ounces",
     ).build()
 
     private val recipe = Recipe.Builder(
@@ -41,7 +41,7 @@ internal class OrderServiceTest {
     // Using Mocks
     @Test
     fun `total should return the total for the order`() {
-        whenever(recipeRepository.findAll(listOf("a")))
+        whenever(recipeRepository.findAllById(listOf("a")))
             .thenReturn(listOf(recipe))
 
         val result = orderService.total(listOf("a"))

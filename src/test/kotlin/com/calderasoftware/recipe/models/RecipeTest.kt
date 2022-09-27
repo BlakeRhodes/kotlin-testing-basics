@@ -17,6 +17,7 @@ internal class RecipeTest {
     fun setUp() {
         builder = Recipe.Builder()
     }
+
     // TODO: Example 3
     // Test is too specific
     @Test

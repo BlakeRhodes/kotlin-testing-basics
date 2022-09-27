@@ -1,6 +1,12 @@
 package com.calderasoftware.recipe.models
 
-class Recipe(
+import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.Document
+
+@Document
+data class Recipe(
+    @Id
+    val id: String? = null,
     val name: String = "",
     val markup: Double = 0.0,
     val ingredients: List<Pair<Ingredient, Double>> = emptyList(),

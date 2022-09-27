@@ -2,29 +2,29 @@ package com.calderasoftware.recipe.services
 
 import com.calderasoftware.recipe.models.Ingredient
 import com.calderasoftware.recipe.models.Recipe
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 internal class DrinkCardServiceTest{
-    lateinit var drinkCardService: DrinkCardService
+    private lateinit var drinkCardService: DrinkCardService
 
-    val ingredients = listOf(
+    private val ingredients = listOf(
         Ingredient.Builder(
             name = "rum",
             unitPrice = .90,
             unitCalories = 65.0,
-            unit = "ounces"
+            unitOfMeasure = "ounces"
         ).build() to 3.0,
         Ingredient.Builder(
             name = "coke",
             unitPrice = .05,
             unitCalories = 10.0,
-            unit = "ounces"
+            unitOfMeasure = "ounces"
         ).build() to 6.0,
     )
 
-    val recipe = Recipe.Builder(
+    private val recipe = Recipe.Builder(
         name = "rum volcano",
         markup = .20,
         ingredients = ingredients,

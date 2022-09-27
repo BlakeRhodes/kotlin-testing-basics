@@ -2,7 +2,9 @@ package com.calderasoftware.recipe.services
 
 import com.calderasoftware.recipe.models.Ingredients
 import com.calderasoftware.recipe.models.Recipe
+import org.springframework.stereotype.Service
 
+@Service
 class DrinkCardService {
     private val directionsFormatter: DirectionsFormatter = DirectionsFormatter()
     private val ingredientFormatter: IngredientFormatter = IngredientFormatter()
@@ -34,22 +36,22 @@ class DrinkCardService {
     }
 }
 
-class DirectionsFormatter {
+private class DirectionsFormatter {
     fun format(directions: List<String>): List<String> {
         val formatted = mutableListOf("* Directions")
-        for(i in 0 .. directions.lastIndex){
-            formatted.add("* ${i+1}. ${directions[i]}")
+        for(i in 0..directions.lastIndex) {
+            formatted.add("* ${i + 1}. ${directions[i]}")
         }
         return formatted
     }
 }
 
-class IngredientFormatter {
-    fun format(ingredients: Ingredients): List<String>{
+private class IngredientFormatter {
+    fun format(ingredients: Ingredients): List<String> {
         val formatted = mutableListOf("* Ingredients")
-        for(i in 0 .. ingredients.lastIndex){
+        for(i in 0..ingredients.lastIndex) {
             formatted.add(
-                "* ${ingredients[i].second} ${ingredients[i].first.unit} ${ingredients[i].first.name}"
+                "* ${ingredients[i].second} ${ingredients[i].first.unitOfMeasure} ${ingredients[i].first.name}"
             )
         }
         return formatted

@@ -1,11 +1,8 @@
 package com.calderasoftware.recipe.repositories
 
 import com.calderasoftware.recipe.models.Recipe
+import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-class RecipeRepository {
-    fun findAll(recipes: List<String>): List<Recipe> {
-        TODO()
-    }
-}
+interface RecipeRepository : MongoRepository<Recipe, String>

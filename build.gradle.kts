@@ -3,8 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "2.7.3"
     id("io.spring.dependency-management") version "1.0.13.RELEASE"
-    kotlin("jvm") version "1.6.21"
-    kotlin("plugin.spring") version "1.6.21"
+    kotlin("jvm") version "1.7.10"
+    kotlin("plugin.spring") version "1.7.10"
 }
 
 group = "com.calderasoftware"
@@ -23,6 +23,7 @@ fun kotlin(library: String) = "org.jetbrains.kotlin:kotlin-$library"
 dependencies {
     implementation(springBootStarter("data-mongodb"))
     implementation(springBootStarter("web"))
+    implementation(springBootStarter("data-rest"))
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation(kotlin("reflect"))
