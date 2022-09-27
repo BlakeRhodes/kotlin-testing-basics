@@ -15,11 +15,12 @@ internal class IngredientTest {
             unitPrice = 2.0
         )
     }
+
     // TODO: Example 1
     // 3 A's
     @Test
     fun `cost should return the product of the unitPrice and the number of units, single test`() {
-       // Arrange
+        // Arrange
         val expected = 4.0
         val ingredient = builder.build()
 

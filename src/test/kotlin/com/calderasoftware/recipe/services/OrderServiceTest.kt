@@ -33,7 +33,7 @@ internal class OrderServiceTest {
     ).build()
 
     @BeforeEach
-    fun setUp(){
+    fun setUp() {
         MockitoAnnotations.openMocks(this)
     }
 

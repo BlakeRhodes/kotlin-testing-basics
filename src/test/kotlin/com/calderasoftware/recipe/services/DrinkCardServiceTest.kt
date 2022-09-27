@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
-internal class DrinkCardServiceTest{
+internal class DrinkCardServiceTest {
     private lateinit var drinkCardService: DrinkCardService
 
     private val ingredients = listOf(
@@ -37,14 +37,14 @@ internal class DrinkCardServiceTest{
     ).build()
 
     @BeforeEach
-    fun setUp(){
+    fun setUp() {
         drinkCardService = DrinkCardService()
     }
 
     // TODO: Example 6
     // Contravariant Test
     @Test
-    fun `format should make a sweet drink card for patrons to read`(){
+    fun `format should make a sweet drink card for patrons to read`() {
         val expected = """
             * * * * * * * * * * * * * * * * * * * * * * * *
             * rum volcano                                 *
