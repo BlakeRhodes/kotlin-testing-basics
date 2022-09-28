@@ -23,15 +23,13 @@ fun kotlin(library: String) = "org.jetbrains.kotlin:kotlin-$library"
 dependencies {
     implementation(springBootStarter("data-mongodb"))
     implementation(springBootStarter("web"))
-    implementation(springBootStarter("data-rest"))
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation(kotlin("reflect"))
     implementation(kotlin("stdlib-jdk8"))
 
     testImplementation(springBootStarter("test"))
-    testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
     testImplementation("org.mockito:mockito-core:4.8.0")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
 }
 
 tasks.withType<KotlinCompile> {
